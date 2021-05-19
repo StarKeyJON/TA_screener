@@ -24,7 +24,7 @@ with open('btc.csv') as f:
 
 #iterate through candles and print the dataset
 for i in range(1, len(candles)):
-    print(candles[i])
+    #print(candles[i])
 
     if is_bullish_engulfing(candles, i):
-        print("{} Bullish Engulfing".format(candles[i]["Date"]))
+        print(" {} Bullish Engulfing".format(candles[i]["Date"]))

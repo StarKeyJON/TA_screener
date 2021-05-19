@@ -15,8 +15,8 @@ for project in crypto:
     f = open(history_filename, 'w')
 # #using yfinance to screen the selected list
     ticker = yf.Ticker(symbol)
-# #creating dataframe consisting of 1yr period
-    df = ticker.history(period="1y")
+# #creating dataframe consisting of specified period
+    df = ticker.history(period="1mo", interval="1h")
 # #writing to the csv file and creating the history
     f.write(df.to_csv())
 # #close the file
